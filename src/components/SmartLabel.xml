@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component
+    name='SmartLabel'
+    extends='Group'>
+  <interface>
+    <field
+        id='text'
+        type='string' />
+    <field
+        id='values'
+        type='assocarray' />
+    <field
+        id='width'
+        type='float' />
+    <field
+        id='horizAlignment'
+        type='string'
+        value='left' />
+    <field
+        id='vertAlignment'
+        type='string'
+        value='bottom' />
+
+    <!-- convenience, set as: 
+        { "KEY": {
+          name: name of font (pkg or font: location)
+          size: font size
+        color: color
+      } 
+    where key is one of:
+     - fontSettings
+     - header1FontSettings
+     - header2FontSettings
+     - header3FontSettings
+     - italicFontSettings
+     - boldFontSettings
+    -->
+    <field
+        id='allFontSettings'
+        type='assocarray' />
+    <!-- font settings: each of the following expects:
+        { 
+          "KEY": {
+            name: name of font (pkg or font: location)
+            size: font size
+            color: color
+          } 
+        ....
+      }
+     -->
+    <field
+        id='fontSettings'
+        type='assocarray' />
+    <field
+        id='header1FontSettings'
+        type='assocarray' />
+
+    <field
+        id='header2FontSettings'
+        type='assocarray' />
+
+    <field
+        id='header3FontSettings'
+        type='assocarray' />
+
+    <field
+        id='italicFontSettings'
+        type='assocarray' />
+
+    <field
+        id='boldFontSettings'
+        type='assocarray' />
+
+        <!-- convneience mthod to change an individual font settings:
+        args: settings key, name, size, color  -->
+    <function name='updateFontSetting' />
+  </interface>
+
+  <children>
+    <LayoutGroup id='contentGroup' />
+  </children>
+</component>

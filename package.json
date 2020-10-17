@@ -1,0 +1,52 @@
+{
+    "name": "roku-smart-label",
+    "version": "0.1.0",
+    "description": "Label allowing for bbedit style formatting of text to mix font styles and images. Example implementation, seeking contributors.",
+    "directories": {
+        "doc": "docs"
+    },
+    "files": [
+        "dist/**/!(manifest)*",
+        "!roku_modules"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "brighterscript": "^0.15.0",
+        "ropm": "^0.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rokucommunity/roku-smart-label.git"
+    },
+    "keywords": [
+        "ropm",
+        "brightscript",
+        "scenegraph",
+        "rokucommunity",
+        "components",
+        "animation",
+        "gif",
+        "poster"
+    ],
+    "author": "George Cook",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rokucommunity/roku-smart-label/issues"
+    },
+    "homepage": "https://github.com/rokucommunity/roku-smart-label#readme",
+    "ts-node": {
+        "transpileOnly": true,
+        "compileOptions": {
+            "incremental": true,
+            "allowJs": false
+        }
+    },
+    "ropm": {
+        "rootDir": "src",
+        "packageRootDir": "dist"
+    },
+    "scripts": {
+        "build": "npx bsc",
+        "test": "cd tests && npx ropm copy && bsc --project ./bsconfig.json"
+    }
+}
