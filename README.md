@@ -14,7 +14,7 @@ ropm install roku-smart-label
 suggestion: use a shorter prefix:
 
 ```bash
-ropm install sl@roku-smart-label
+ropm install sl@npm:roku-smart-label
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *without prefix:*
 
 ```
-  <rokusmartlabel_Smart_Label 
+  <rokusmartlabel_SmartLabel 
       id="label"
       width='900' />
 ```
@@ -44,7 +44,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *using sl prefix:*
 
 ```
-  <sl_Smart_Label 
+  <sl_SmartLabel 
       id="label"
       width='900' />
 ```
