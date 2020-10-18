@@ -54,7 +54,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *without prefix:*
 
 ```
-  label = createObject("roSGNode", "rokusmartlabel_Smart_Label")
+  label = createObject("roSGNode", "rokusmartlabel_SmartLabel")
   label.width = 900
 ```
 
@@ -62,7 +62,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *using sl prefix:*
 
 ```
-  label = createObject("roSGNode", "sl_Smart_Label")
+  label = createObject("roSGNode", "sl_SmartLabel")
   label.width = 900
 ```
 
