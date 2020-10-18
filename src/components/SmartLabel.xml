@@ -71,7 +71,7 @@
         id='boldFontSettings'
         type='assocarray' />
 
-        <!-- convneience mthod to change an individual font settings:
+        <!-- convenience method to change an individual font settings:
         args: settings key, name, size, color  -->
     <function name='updateFontSetting' />
   </interface>
@@ -79,4 +79,5 @@
   <children>
     <LayoutGroup id='contentGroup' />
   </children>
+  <script uri="SmartLabel.brs" />
 </component>
