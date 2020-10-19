@@ -6,7 +6,11 @@ BBEdit style label, allowing to mix different fonts and images. Reference implem
 [![NPM Version](https://badge.fury.io/js/roku-smart-label.svg?style=flat)](https://npmjs.org/package/roku-smart-label)
 
 ## Installation
+
 ### Using ropm
+
+Use the [ropm package manager for roku](https://github.com/rokucommunity/ropm)
+
 ```bash
 ropm install roku-smart-label
 ```
