@@ -57,35 +57,6 @@ end function
 
 
 function configureLabel()
-  ' m.label.allFontSettings = {
-  '   header1Font: {
-  '     name: "font:MediumBoldSystemFont"
-  '     size: 130
-  '   }
-  '   header2Font: {
-  '     name: "font:MediumBoldSystemFont"
-  '     size: 60
-  '   }
-  '   header3Font: {
-  '     name: "font:MediumSystemFont"
-  '     size: 50
-  '   }
-  '   font: {
-  '     name: "font:MediumSystemFont"
-  '     size: 30
-  '     color: "0xff0000"
-  '   }
-  '   italicFont: {
-  '     name: "font:MediumBoldSystemFont"
-  '     size: 32
-  '     color: "0x00ff00"
-  '   }
-  '   boldFont: {
-  '     name: "font:MediumSystemFont"
-  '     size: 34
-  '     color: "0x0000ff"
-  '   }
-  ' }
   m.label.fontSettings = {
     name: "font:MediumSystemFont"
     size: 34
