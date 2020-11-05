@@ -15,8 +15,10 @@ function init()
   m.defaultFont = getFont("MediumSystemFont", 20)
   createRegexes()
   setFontDefaults()
-  for each name in m.fontFields
-    m.top.observeField(name, "updateFonts")
+  for each settingsKey in m.settingsKeys
+    if m.settingsKeys[settingsKey] = true
+      m.top.observeField(settingsKey, "updateFonts")
+    end if
   end for
 
   updateFonts()
@@ -147,7 +149,8 @@ function updateFonts(event = invalid)
   if event = invalid
     fontNames = m.fontFields
   else
-    fontNames = [event.getField()]
+    field = event.getField()
+    fontNames = [field.replace("Settings", "")]
   end if
 
   for each name in fontNames
@@ -195,18 +198,18 @@ function updateFontSetting(key, name, size, color = "#000000")
   end if
 end function
 
-function onAllFontSettingsChange(settings)
-  for each key in settings
-    setting = settings[key]
-    
-    if (type(setting) = "roAssociativeArray")
-      if m.settingsKeys[key] <> invalid
+function onAllFontSettingsChange(event as Object)
+  settings = event.getData()
+  for each style in settings
+    setting = settings[style]
+    if type(setting) = "roAssociativeArray"
+      if m.settingsKeys[style + "Settings"] <> invalid
         m[style] = setting
       else
         ? "unknown style " ;style
       end if
     else
-      ? "illegal font settings for key "; key
+      ? "illegal font settings for style "; style
     end if
   end for
   onTextChange()
