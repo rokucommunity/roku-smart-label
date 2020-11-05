@@ -187,7 +187,7 @@ function makeFontSetting(name, size, color = "#000000")
   }
 end function 
 
-function udpateFontSetting(key, name, size, color = "#000000")
+function updateFontSetting(key, name, size, color = "#000000")
   if m.settingsKeys[key] <> invalid
     m[style] = makeFontSetting(name, size, color)
   else
