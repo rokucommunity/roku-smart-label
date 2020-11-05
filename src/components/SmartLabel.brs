@@ -153,10 +153,10 @@ function updateFonts(event = invalid)
     fontNames = [field.replace("Settings", "")]
   end if
 
-  for each name in fontNames
-    fontSettings = m.top[name + "Settings"]
-    m[name] = getFont(fontSettings.name, fontSettings.size)
-    m[name + "Color"] = fontSettings.color
+  for each style in fontNames
+    settings = m.top[style + "Settings"]
+    m[style] = getFont(settings.name, settings.size)
+    m[style + "Color"] = settings.color
   end for
 
   onTextChange()
@@ -188,11 +188,13 @@ function makeFontSetting(name, size, color = "#000000")
     size: size
     color: color
   }
-end function 
+end function
 
 function updateFontSetting(key, name, size, color = "#000000")
+  style = key.replace("Settings", "")
   if m.settingsKeys[key] <> invalid
-    m[style] = makeFontSetting(name, size, color)
+    m[style] = getFont(name, size)
+    m[style + "Color"] = color
   else
     ? "unknown style " ;style
   end if
@@ -204,7 +206,8 @@ function onAllFontSettingsChange(event as Object)
     setting = settings[style]
     if type(setting) = "roAssociativeArray"
       if m.settingsKeys[style + "Settings"] <> invalid
-        m[style] = setting
+        m[style] = getFont(setting.name, setting.size)
+        m[style + "Color"] = setting.color
       else
         ? "unknown style " ;style
       end if
