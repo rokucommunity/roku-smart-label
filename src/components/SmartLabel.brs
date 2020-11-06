@@ -203,11 +203,11 @@ end function
 function onAllFontSettingsChange(event as Object)
   allFontSettings = event.getData()
   for each fontName in allFontSettings
-    setting = allFontSettings[fontName]
-    if type(setting) = "roAssociativeArray"
+    fontSettings = allFontSettings[fontName]
+    if type(fontSettings) = "roAssociativeArray"
       if m.settingsKeys[fontName + "Settings"] <> invalid
-        m[fontName] = getFont(setting.name, setting.size)
-        m[fontName + "Color"] = setting.color
+        m[fontName] = getFont(fontSettings.name, fontSettings.size)
+        m[fontName + "Color"] = fontSettings.color
       else
         ? "unknown fontName " ;fontName
       end if
