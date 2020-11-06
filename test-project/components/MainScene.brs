@@ -24,7 +24,7 @@ function makeTexts()
   text1 += "\nposter ${so1} test here ${so2} more text"
   text1 += "\n${so3}"
 
-  text2 = "\n\n#you shoudl watch ${name}#"
+  text2 = "\n\n#you should watch ${name}#"
   text2 += "\n${so3}"
   text2 += "\n##Description:##"
   text2 += "\n###${description}###"
@@ -81,7 +81,8 @@ function configureLabel()
     boldFont: {
       name: "font:MediumSystemFont"
       size: 34
-  } }
+    }
+  }
 
   m.label.values = {
     name: "Jurassic Park"
