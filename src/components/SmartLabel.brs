@@ -191,8 +191,8 @@ function makeFontSetting(name, size, color = "#000000")
 end function
 
 function updateFontSetting(settingsKey, name, size, color = "#000000")
-  fontName = settingsKey.replace("Settings", "")
-  if m.settingsKey[settingsKey] <> invalid
+  if m.settingsKeys[settingsKey] <> invalid
+    fontName = settingsKey.replace("Settings", "")
     m[fontName] = getFont(name, size)
     m[fontName + "Color"] = color
   else
