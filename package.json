@@ -11,7 +11,7 @@
     ],
     "dependencies": {},
     "devDependencies": {
-        "brighterscript": "^0.15.0"
+        "brighterscript": "^0.19.0"
     },
     "repository": {
         "type": "git",
