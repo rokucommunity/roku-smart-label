@@ -84,6 +84,7 @@ function addLine(text)
       poster = m.posters[part.text]
       if poster <> invalid
         newPoster = m.top.createChild("Poster")
+        newPoster.blendColor = poster.blendColor
         newPoster.width = poster.width
         newPoster.height = poster.height
         newPoster.uri = poster.uri
