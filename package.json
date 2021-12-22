@@ -1,6 +1,6 @@
 {
     "name": "roku-smart-label",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Label allowing for bbedit style formatting of text to mix font styles and images. Example implementation, seeking contributors.",
     "scripts": {
         "preversion": "npm run validate",
