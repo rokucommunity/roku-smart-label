@@ -2,8 +2,11 @@
 
 BBEdit style label, allowing to mix different fonts and images. Reference implementation, looking for contributors
 
-![build](https://github.com/rokucommunity/roku-smart-label/workflows/build/badge.svg)
-[![NPM Version](https://badge.fury.io/js/roku-smart-label.svg?style=flat)](https://npmjs.org/package/roku-smart-label)
+[![build status](https://img.shields.io/github/workflow/status/rokucommunity/roku-smart-label/build.svg?logo=github)](https://github.com/rokucommunity/roku-smart-label/actions?query=workflow%3Abuild)
+[![monthly downloads](https://img.shields.io/npm/dm/roku-smart-label.svg?sanitize=true&logo=npm&logoColor=)](https://npmcharts.com/compare/roku-smart-label?minimal=true)
+[![npm version](https://img.shields.io/npm/v/roku-smart-label.svg?logo=npm)](https://www.npmjs.com/package/roku-smart-label)
+[![license](https://img.shields.io/github/license/rokucommunity/roku-smart-label.svg)](LICENSE)
+[![Slack](https://img.shields.io/badge/Slack-RokuCommunity-4A154B?logo=slack)](https://join.slack.com/t/rokudevelopers/shared_invite/zt-4vw7rg6v-NH46oY7hTktpRIBM_zGvwA)
 
 ## Installation
 
@@ -39,7 +42,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *without prefix:*
 
 ```
-  <rokusmartlabel_SmartLabel 
+  <rokusmartlabel_SmartLabel
       id="label"
       width='900' />
 ```
@@ -48,7 +51,7 @@ Note that updating any property causes a _brute force reload_ of all the data
 *using sl prefix:*
 
 ```
-  <sl_SmartLabel 
+  <sl_SmartLabel
       id="label"
       width='900' />
 ```
