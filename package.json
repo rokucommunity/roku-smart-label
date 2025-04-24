@@ -4,7 +4,8 @@
     "description": "Label allowing for bbedit style formatting of text to mix font styles and images. Example implementation, seeking contributors.",
     "scripts": {
         "preversion": "npm run validate",
-        "validate": "bsc --create-package=false --copy-to-staging=false"
+        "validate": "bsc --create-package=false --copy-to-staging=false",
+        "package": "npm run build && npm pack"
     },
     "files": [
         "src/**/*"
